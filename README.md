@@ -24,6 +24,7 @@ Predict whether a customer will default on their credit card payment using balan
 ## Methods Implemented
 
 | Method              | Type |
+
 | Logistic Regression | Parametric |
 | LDA                 | Parametric |
 | QDA                 | Parametric |
