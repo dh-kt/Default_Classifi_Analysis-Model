@@ -103,17 +103,17 @@ Predict whether a customer will default on their credit card payment using balan
 
 ## Comparison at Threshold 0.2
 
-| Method               | Sensitivity | Precision | Predicted Yes |
+| Method                 | Sensitivity | Precision | Predicted Yes |
 
-| Logistic Regression  | 0.46        | 0.36      | 88 |
+| Logistic Regression    | 0.46        | 0.36      | 88 |
 
-| LDA                  | 0.46        | 0.40      | 80 |
+| LDA                    | 0.46        | 0.40      | 80 |
 
-| QDA                  | 0.52        | 0.37      | 97 |
+| QDA                    | 0.52        | 0.37      | 97 |
 
-| Naive Bayes          | 0.51        | 0.36      | 97 |
+| Naive Bayes            | 0.51        | 0.36      | 97 |
 
-| KNN                  | 0.00        | 0.00       | 0 |
+| KNN                    | 0.00        | 0.00       | 0 |
 
 ## Key Takeaways
 1. **Accuracy is misleading** for imbalanced data (96.7% No, 3.3% Yes)
