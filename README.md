@@ -10,9 +10,13 @@ Predict whether a customer will default on their credit card payment using balan
 ## Dataset
 
 | Property | Value |
+
 | Source | ISLP package (Default dataset) |
+
 | Observations | 10,000 customers |
+
 | Features | balance, income |
+
 | Target | default (Yes/No) |
 
 ### Class Distribution
@@ -26,9 +30,13 @@ Predict whether a customer will default on their credit card payment using balan
 | Method              | Type |
 
 | Logistic Regression | Parametric |
+
 | LDA                 | Parametric |
+
 | QDA                 | Parametric |
+
 | Naive Bayes         | Parametric |
+
 | KNN (k=5)           | Non-parametric |
 
 ## Results at Default Threshold (0.5)
