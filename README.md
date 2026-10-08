@@ -31,13 +31,9 @@ This project develops and evaluates classification models for predicting credit 
 | Method              | Type |
 |---------------------|------------|
 | Logistic Regression | Parametric |
-|---------|---------|
 | LDA                 | Parametric |
-|---------|---------|
 | QDA                 | Parametric |
-|---------|---------|
 | Naive Bayes         | Parametric |
-
 | KNN (k=5)           | Non-parametric |
 
 ## Results at Default Threshold (0.5)
