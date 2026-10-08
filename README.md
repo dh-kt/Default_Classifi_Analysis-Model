@@ -1,11 +1,11 @@
-# Default Classification - Credit Card Default Prediction
+# Credit Card Default Prediction
+
+Machine Learning Classification Analysis for Credit Risk Assessment
 
 ## Project Overview
 
 This project develops and evaluates classification models for predicting credit card default risk using the ISLP Default dataset.
 
-**Author:** DhaBa  
-**Date:** Sept 2026  
 **Tools:** Python, scikit-learn, pandas, numpy
 
 ## Dataset
@@ -29,7 +29,7 @@ This project develops and evaluates classification models for predicting credit 
 ## Methods Implemented
 
 | Method              | Type |
-
+|---------|---------|
 | Logistic Regression | Parametric |
 
 | LDA                 | Parametric |
