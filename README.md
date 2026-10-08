@@ -118,4 +118,4 @@ git clone https://github.com/dh-kt/credit_card-default-prediction.git
 pip install pandas numpy matplotlib scikit-learn ISLP
 
 # Run the notebook
-jupyter notebook default_classification_analysis.ipynb
+jupyter notebook credit_card-default-prediction.ipynb
