@@ -39,15 +39,11 @@ This project develops and evaluates classification models for predicting credit 
 ## Results at Default Threshold (0.5)
 
 | Method             | Accuracy | AUC |
-
+|---------|---------|
 | Logistic Regression | 0.9695 | 0.9425 |
-
 | LDA                 | 0.9680 | 0.9426 |
-
 | QDA                 | 0.9695 | 0.9420 |
-
 | Naive Bayes         | 0.9665 | 0.9400 |
-
 | KNN (k=5)           | 0.9655 | 0.5000 |
 
 **Finding:** While KNN achieves high accuracy, its ROC-AUC score of 0.50 indicates no ability to distinguish between defaulting and non-defaulting customers. This demonstrates the limitations of relying solely on accuracy in highly imbalanced datasets.
