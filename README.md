@@ -29,7 +29,7 @@ This project develops and evaluates classification models for predicting credit 
 ## Methods Implemented
 
 | Method              | Type |
-|---------|---------|
+|---------------------|------------|
 | Logistic Regression | Parametric |
 
 | LDA                 | Parametric |
