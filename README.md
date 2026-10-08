@@ -1,10 +1,11 @@
 # Default Classification - Credit Card Default Prediction
 
 ## Project Overview
-Predict whether a customer will default on their credit card payment using balance and income.
+
+This project develops and evaluates classification models for predicting credit card default risk using the ISLP Default dataset.
 
 **Author:** DhaBa  
-**Date:** April 2025  
+**Date:** Sept 2026  
 **Tools:** Python, scikit-learn, pandas, numpy
 
 ## Dataset
@@ -23,7 +24,7 @@ Predict whether a customer will default on their credit card payment using balan
 - No Default: 9,667 (96.7%)
 - Default: 333 (3.3%)
 
-**Key Insight:** Imbalanced data (only 3.3% default). Accuracy is misleading.
+**Key Insight:** Only 3.3% of customers default. This class imbalance means that accuracy alone is not sufficient for model evaluation. Precision, recall, and ROC-AUC are therefore considered throughout the analysis.
 
 ## Methods Implemented
 
@@ -53,7 +54,7 @@ Predict whether a customer will default on their credit card payment using balan
 
 | KNN (k=5)           | 0.9655 | 0.5000 |
 
-**Finding:** KNN fails on imbalanced data (AUC = 0.50 = random guessing).
+**Finding:** While KNN achieves high accuracy, its ROC-AUC score of 0.50 indicates no ability to distinguish between defaulting and non-defaulting customers. This demonstrates the limitations of relying solely on accuracy in highly imbalanced datasets.
 
 ## Threshold Tuning Results (Logistic Regression)
 
@@ -77,6 +78,16 @@ Predict whether a customer will default on their credit card payment using balan
 
 | 0.9       | 0.03         | 0.85     | 2 |
 
+### Threshold Tuning Findings
+
+Lowering the classification threshold increases recall by identifying a larger proportion of actual defaulters, but it also increases the number of false positives.
+
+Conversely, higher thresholds improve precision by generating fewer false alarms, but they miss a greater number of default cases.
+
+Among the evaluated thresholds, 0.2 and 0.3 provide the most practical balance between sensitivity and precision. Threshold 0.2 identifies the highest proportion of defaulting customers, while threshold 0.3 achieves the strongest balance between recall and precision.
+
+Given the objective of minimizing missed default cases, threshold 0.2 is selected for further evaluation and business recommendation.
+
 ## Final Recommendation
 
 | Setting         | Value |
@@ -92,9 +103,10 @@ Predict whether a customer will default on their credit card payment using balan
 | **Predicted Yes** | 88 customers flagged as high-risk |
 
 ### Why Threshold 0.2?
-- Missing a defaulter (False Negative) = HIGH cost
-- False alarm (False Positive) = LOW cost
-- Lower threshold catches more defaulters
+
+- Missing a defaulter has a higher business cost than reviewing a low-risk customer.
+- A lower threshold identifies substantially more high-risk customers.
+- Logistic Regression provides interpretable probability estimates suitable for risk scoring.
 
 ### Business Impact
 - Default threshold (0.5): catches 25 defaulters per 100
@@ -120,13 +132,14 @@ Predict whether a customer will default on their credit card payment using balan
 2. **Sensitivity and Precision** are better metrics
 3. **Threshold tuning** improves business outcomes
 4. **KNN fails** on imbalanced data (AUC = 0.50)
-5. **Logistic Regression** is interpretable and performs well
+5. **Logistic Regression** provides the best balance of interpretability, discrimination performance, and practical business value. 
 
 ## How to Run
 
 ```bash
 # Clone repository
-git clone https://github.com/dh-kt/boston-housing-analysis.git
+
+git clone https://github.com/dh-kt/credit_card-default-prediction.git
 
 # Install dependencies
 pip install pandas numpy matplotlib scikit-learn ISLP
