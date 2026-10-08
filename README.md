@@ -11,13 +11,10 @@ This project develops and evaluates classification models for predicting credit 
 ## Dataset
 
 | Property | Value |
-
+|----------|----------------------|
 | Source | ISLP package (Default dataset) |
-
 | Observations | 10,000 customers |
-
 | Features | balance, income |
-
 | Target | default (Yes/No) |
 
 ### Class Distribution
