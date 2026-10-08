@@ -51,23 +51,15 @@ This project develops and evaluates classification models for predicting credit 
 ## Threshold Tuning Results (Logistic Regression)
 
 | Threshold | Sensitivity | Precision | Predicted Yes |
-
+|-----------|----------|---------|--------|
 | 0.1       | 0.62         | 0.08     | 256 |
-
 | **0.2**   | **0.46**     | **0.36** | **88** |
-
 | 0.3       | 0.38         | 0.44     | 60 |
-
 | 0.4       | 0.30         | 0.52     | 40 |
-
 | 0.5       | 0.25         | 0.60     | 28 |
-
 | 0.6       | 0.18         | 0.68     | 18 |
-
 | 0.7       | 0.12         | 0.75     | 11 |
-
 | 0.8       | 0.07         | 0.80     | 6 |
-
 | 0.9       | 0.03         | 0.85     | 2 |
 
 ### Threshold Tuning Findings
@@ -83,15 +75,11 @@ Given the objective of minimizing missed default cases, threshold 0.2 is selecte
 ## Final Recommendation
 
 | Setting         | Value |
-
+|---------------------|---------|
 | **Model**       | Logistic Regression |
-
 | **Threshold**   | 0.2 |
-
 | **Sensitivity** | 46% (catches 46 out of 100 defaulters) |
-
 | **Precision**   | 36% (1 in 3 flagged is correct) |
-
 | **Predicted Yes** | 88 customers flagged as high-risk |
 
 ### Why Threshold 0.2?
@@ -108,15 +96,11 @@ Given the objective of minimizing missed default cases, threshold 0.2 is selecte
 ## Comparison at Threshold 0.2
 
 | Method                 | Sensitivity | Precision | Predicted Yes |
-
+|---------------------|---------|--------|--------------|
 | Logistic Regression    | 0.46        | 0.36      | 88 |
-
 | LDA                    | 0.46        | 0.40      | 80 |
-
 | QDA                    | 0.52        | 0.37      | 97 |
-
 | Naive Bayes            | 0.51        | 0.36      | 97 |
-
 | KNN                    | 0.00        | 0.00       | 0 |
 
 ## Key Takeaways
