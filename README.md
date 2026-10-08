@@ -39,7 +39,7 @@ This project develops and evaluates classification models for predicting credit 
 ## Results at Default Threshold (0.5)
 
 | Method             | Accuracy | AUC |
-|---------|---------|
+|---------------------|---------|--------|
 | Logistic Regression | 0.9695 | 0.9425 |
 | LDA                 | 0.9680 | 0.9426 |
 | QDA                 | 0.9695 | 0.9420 |
